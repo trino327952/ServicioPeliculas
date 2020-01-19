@@ -14,7 +14,8 @@ class TipoUsuarioController extends Controller
      */
     public function index()
     {
-         return view("admin.TipoUsuario.FormTipoUsuario");
+        $items = TipoUsuario::where('estado_del','1')->get();
+         return view("admin.TipoUsuario.FormTipoUsuario")->with('listaTipoUsuarios',$items);
     }
 
     /**
@@ -36,12 +37,19 @@ class TipoUsuarioController extends Controller
     public function store(Request $request)
     {
         
-        $item = new TipoUsuario();
-        $item->codigo=Str::random(10); //$items->cod = Str::random(10)
-        $item->estado_del = "1";
-        $item->descripcion = $resquest->descripcion;
-        $item->save();
+        try {
+           //return response()->json($request);
+            $item = new TipoUsuario();
+            $item->codigo=Str::random(10); //$items->cod = Str::random(10)
+            $item->estado_del = "1";
+            $item->descripcion = $request->descripcion;
+            $item->save();
 
+            return redirect('/tipousuario');
+
+        } catch (\Throwable $th) {
+            return redirect('/tipousuario');
+        }
 
         // $table->bigIncrements('id');
         // $table->string('codigo');

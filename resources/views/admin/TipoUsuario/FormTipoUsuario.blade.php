@@ -9,7 +9,9 @@
 
                 <div class="card-body">
 
-                    <form>
+                    <form class="needs-validation" action ="{{url('/tipousuario')}}" method="POST">
+                        @csrf
+                        @method('POST')
                         <div class="form-group">
                             <label for="exampleInputEmail1">Datos Usuario</label>
                             <input type="text" name="descripcion" class="form-control" aria-describedby="emailHelp"  required>
