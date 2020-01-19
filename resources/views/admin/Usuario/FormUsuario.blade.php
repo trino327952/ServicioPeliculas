@@ -9,11 +9,40 @@
 
                 <div class="card-body">
                     <form>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="exampleInputEmail1">Datos Usuario</label>
-                            <input type="text" name="descripcion" class="form-control" aria-describedby="emailHelp"  required>
+                            <input type="text"  name="descripcion" class="form-control" aria-describedby="emailHelp"  required>
+                            <small id="emailHelp" class="form-text text-muted">ingresar datos validos del usuario</small>
+                        </div> -->
+                        <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">TipoUsuario</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>TipoUsuario</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        </div>
+
+                         <div class="form-group">
+                            <label for="exampleInputEmail1">name</label>
+                            <input type="text"  name="name" class="form-control" aria-describedby="emailHelp"  required>
                             <small id="emailHelp" class="form-text text-muted">ingresar datos validos del usuario</small>
                         </div>
+
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">email</label>
+                            <input type="text"  name="email" class="form-control" aria-describedby="emailHelp"  required>
+                            <small id="emailHelp" class="form-text text-muted">ingresar datos validos del usuario</small>
+                        </div>
+
+
+                        
+
+
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </form>                 
                 </div>
