@@ -18,7 +18,7 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="inputGroupSelect01">TipoUsuario</label>
                         </div>
-                        <select class="custom-select" id="inputGroupSelect01">
+                        <select class="custom-select" id="inputGroupSelect01" name="idTipo">
                             <option selected>TipoUsuario</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
 class UserController extends Controller
 {
     /**
@@ -34,7 +34,12 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item = new  User();
+        $item->idtipo = $resquest->idtipo;
+        $item->name = $resquest->name;
+        $item->email = $resquest->email;
+        $item->estado_del = "1";
+        $item->save();
     }
 
     /**
