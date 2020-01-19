@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\TipoUsuario;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Str;
 class TipoUsuarioController extends Controller
 {
     /**
@@ -35,7 +35,18 @@ class TipoUsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $item = new TipoUsuario();
+        $item->codigo=Str::random(10); //$items->cod = Str::random(10)
+        $item->estado_del = "1";
+        $item->descripcion = $resquest->descripcion;
+        $item->save();
+
+
+        // $table->bigIncrements('id');
+        // $table->string('codigo');
+        // $table->string('descripcion');
+        // $table->string('estado_del','2')->default('1');
     }
 
     /**
