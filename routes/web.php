@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('usuario/','UserController');
 
+Route::resource('tipousuario/','TipoUsuarioController');
