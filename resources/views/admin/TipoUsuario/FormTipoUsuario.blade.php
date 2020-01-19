@@ -23,6 +23,10 @@
                    <!-- invocamos el html del archivo TablaTipoUsuario.blade.php -->   
                     @include('admin.TipoUsuario.TablaTipoUsuario') 
                 </div>
+                <div class="card-footer">
+                   <!-- invocamos el html del archivo TablaTipoUsuario.blade.php -->   
+                    @include('admin.TipoUsuario.ModalTipoUsuario') 
+                </div>
             </div>
         </div>
     </div>
