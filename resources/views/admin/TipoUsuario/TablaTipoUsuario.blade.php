@@ -12,9 +12,12 @@
       <th scope="row">1</th>
       <td>{{$item['descripcion']}}</td>
       <td>
-        aqui van los botones de eliminar y actualizar
+   
+         <button type="button" class="btn btn-lg btn-primary" disabled>Eliminar</button>
+         <button type="button" class="btn btn-lg btn-primary" disabled>Editar</button>
+         
       </td>
-      
+          
     </tr>
     @endforeach
   </tbody>
